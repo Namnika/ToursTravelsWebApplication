@@ -1,4 +1,10 @@
 import React from "react";
+import Gallery1 from "./assests/images/gallery1.jpg";
+import Gallery2 from "./assests/images/gallery2.jpg";
+import Gallery3 from "./assests/images/gallery3.jpg";
+import Gallery4 from "./assests/images/gallery4.jpg";
+import Gallery5 from "./assests/images/gallery5.jpg";
+import Gallery6 from "./assests/images/gallery6.jpg";
 
 function Gallery() {
 	return (
@@ -12,21 +18,21 @@ function Gallery() {
 					<div class="row">
 						<div class="col-md-4">
 							<img
-								src="images/gallery1.jpg"
+								src={Gallery1}
 								alt="image-1"
 								class="img-fluid rounded"
 							/>
 						</div>
 						<div class="col-md-4">
 							<img
-								src="images/gallery2.jpg"
+								src={Gallery2}
 								alt="image-2"
 								class="img-fluid rounded"
 							/>
 						</div>
 						<div class="col-md-4">
 							<img
-								src="images/gallery3.jpg"
+								src={Gallery3}
 								alt="image-3"
 								class="img-fluid rounded"
 							/>
@@ -36,21 +42,21 @@ function Gallery() {
 					<div class="row">
 						<div class="col-md-4">
 							<img
-								src="images/gallery4.jpg"
+								src={Gallery4}
 								alt="image-4"
 								class="img-fluid rounded"
 							/>
 						</div>
 						<div class="col-md-4">
 							<img
-								src="images/gallery5.jpg"
+								src={Gallery5}
 								alt="image-5"
 								class="img-fluid rounded"
 							/>
 						</div>
 						<div class="col-md-4">
 							<img
-								src="images/gallery6.jpg"
+								src={Gallery6}
 								alt="image-6"
 								class="img-fluid rounded"
 							/>

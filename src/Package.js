@@ -1,4 +1,13 @@
 import React from "react";
+import Package1 from "./assests/images/london-image.jpg";
+import Package2 from "./assests/images/newyork-image.png";
+import Package3 from "./assests/images/paris-image.jpg";
+import Package4 from "./assests/images/germany-image.jpg";
+import Package5 from "./assests/images/mumbai-image.jpg";
+import Package6 from "./assests/images/toronto-image.jpg";
+import Package7 from "./assests/images/dubai-image.jpg";
+import Package8 from "./assests/images/santorini-image.jpg";
+import Package9 from "./assests/images/sydney-image.jpg";
 
 function Package() {
     return (
@@ -10,7 +19,7 @@ function Package() {
                 <div class="package-grid my-5">
                     <div class="card package-card border border-opacity-25">
                         <img
-                            src="images/london-image.jpg"
+                            src={Package1}
                             class="card-img"
                             alt="package1"
                         />
@@ -40,7 +49,7 @@ function Package() {
 
                     <div class="card package-card border border-opacity-25">
                         <img
-                            src="images/newyork-image.png"
+                            src={Package2}
                             class="card-img"
                             alt="package2"
                         />
@@ -68,7 +77,7 @@ function Package() {
                     </div>
 
                     <div class="card package-card border border-opacity-25">
-                        <img src="images/paris-image.jpg" class="card-img" alt="package3" />
+                        <img src={Package3} class="card-img" alt="package3" />
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Paris, France</h5>
                             <p class="card-text text-wrap">
@@ -94,7 +103,7 @@ function Package() {
                     </div>
                     <div class="card package-card border border-opacity-25">
                         <img
-                            src="images/germany-image.jpg"
+                            src={Package4}
                             class="card-img"
                             alt="package4"
                         />
@@ -123,7 +132,7 @@ function Package() {
                     </div>
                     <div class="card package-card border border-opacity-25">
                         <img
-                            src="images/mumbai-image.jpg"
+                            src={Package5}
                             class="card-img"
                             alt="package5"
                         />
@@ -153,7 +162,7 @@ function Package() {
                     </div>
                     <div class="card package-card border border-opacity-25">
                         <img
-                            src="images/toronto-image.jpg"
+                            src={Package6}
                             class="card-img"
                             alt="package6"
                         />
@@ -182,7 +191,7 @@ function Package() {
                         </div>
                     </div>
                     <div class="card package-card border border-opacity-25">
-                        <img src="images/dubai-image.jpg" class="card-img" alt="package7" />
+                        <img src={Package7} class="card-img" alt="package7" />
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Dubai, UAE</h5>
                             <p class="card-text text-wrap">
@@ -209,7 +218,7 @@ function Package() {
                     </div>
                     <div class="card package-card border border-opacity-25">
                         <img
-                            src="images/santorini-image.jpg"
+                            src={Package8}
                             class="card-img"
                             alt="package8"
                         />
@@ -239,7 +248,7 @@ function Package() {
                     </div>
                     <div class="card package-card border border-opacity-25">
                         <img
-                            src="images/sydney-image.jpg"
+                            src={Package9}
                             class="card-img"
                             alt="package9"
                         />

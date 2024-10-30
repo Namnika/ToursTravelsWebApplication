@@ -1,4 +1,5 @@
 import React from "react";
+import AboutUsImage from "./assests/images/aboutus-image.jpg"
 
 function AboutUs() {
     return (
@@ -12,7 +13,7 @@ function AboutUs() {
                     <div class="row align-items-start g-5">
                         <div class="col-md-6">
                             <img
-                                src="images/aboutus-image.jpg"
+                                src={AboutUsImage}
                                 alt="about-us"
                                 class="img-fluid rounded"
                             />
