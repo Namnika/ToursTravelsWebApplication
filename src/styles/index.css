@@ -15,11 +15,13 @@ h1 {
   font-size: 3.5rem !important;
   color: rgba(0, 0, 0, 0.63);
 }
+
 h2 {
   font-weight: 200;
   font-size: 2.3rem !important;
   color: rgba(0, 0, 0, 0.63);
 }
+
 h3 {
   font-weight: 200;
   font-size: 1.8rem !important;
@@ -32,7 +34,7 @@ header {
   height: 95vh;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.35)),
-    url("/public/images/background.jpg");
+    url("../assests/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -138,15 +140,19 @@ li p:hover {
   0% {
     content: "United State";
   }
+
   25% {
     content: "India";
   }
+
   50% {
     content: "France";
   }
+
   75% {
     content: "Germany";
   }
+
   100% {
     content: "United State";
   }
@@ -253,6 +259,7 @@ li p:hover {
 .col-md-4 {
   margin-bottom: 20px;
 }
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
