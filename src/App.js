@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Header";
+import RegisterModal from "./BsComponents/RegisterModal";
+import LoginModal from "./BsComponents/LoginModal";
+import BookingForm from "./BookingForm";
+import Package from "./Package";
+import Services from "./Services";
+import Gallery from "./Gallery";
+import AboutUs from "./AboutUs";
+import Footer from "./Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Hero Section */}
+      <Header />
+
+      {/* Register Modal  */}
+      <RegisterModal />
+
+      {/* Login Modal  */}
+      <LoginModal />
+
+      {/* travel form Section */}
+      <BookingForm />
+
+      {/* Package Section */}
+      <Package />
+
+      {/* Services Section */}
+      <Services />
+
+      {/* Gallery Section */}
+      <Gallery />
+
+      {/* About Us Section  */}
+      <AboutUs />
+
+      {/* Footer  */}
+      <Footer />
     </div>
   );
 }
