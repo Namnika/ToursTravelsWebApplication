@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Logo from "./assests/images/brand-logo.png";
 import RegisterModal from "./BsComponents/RegisterModal";
 import LoginModal from "./BsComponents/LoginModal";
 import BookingForm from "./BookingForm";
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       {/* Hero Section */}
-      <Header />
+      <Header Logo={Logo} />
 
       {/* Register Modal  */}
       <RegisterModal />
@@ -37,7 +38,7 @@ function App() {
       <AboutUs />
 
       {/* Footer  */}
-      <Footer />
+      <Footer Logo={Logo} />
     </div>
   );
 }
