@@ -40,30 +40,24 @@ function RegisterModal() {
       [name]: value,
     }));
 
-    if (name === "email" && emailregex.test(value)) {
-      setValidEmailText({ text: "✅", className: "success" });
-    } else {
+    if (name === "email") {
       setValidEmailText({
-        text: notValidEmailText.text,
-        className: "danger",
+        text: emailregex.test(value) ? "✅" : notValidEmail,
+        className: emailregex.test(value) ? "success" : "danger",
       });
     }
 
-    if (name === "password" && passregex.test(value)) {
-      setValidPassText({ text: "Validated", className: "success" });
-    } else {
+    if (name === "password") {
       setValidPassText({
-        text: "Not Validated",
-        className: "danger",
+        text: passregex.test(value) ? "Validated" : notValidPass,
+        className: passregex.test(value) ? "success" : "danger",
       });
     }
 
-    if (name === "contact" && contactregex.test(value)) {
-      setValidContactText({ text: "✅", className: "success" });
-    } else {
+    if (name === "contact") {
       setValidContactText({
-        text: notValidContactText.text,
-        className: "danger",
+        text: contactregex.test(value) ? "✅" : notValidContact,
+        className: contactregex.test(value) ? "success" : "danger",
       });
     }
   }
