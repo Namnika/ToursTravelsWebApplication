@@ -6,66 +6,41 @@ import Gallery4 from "./assests/images/gallery4.jpg";
 import Gallery5 from "./assests/images/gallery5.jpg";
 import Gallery6 from "./assests/images/gallery6.jpg";
 
+export const GalleryApi = [
+	{ id: 1, galleryUrl: Gallery1 },
+	{ id: 2, galleryUrl: Gallery2 },
+	{ id: 3, galleryUrl: Gallery3 },
+	{ id: 4, galleryUrl: Gallery4 },
+	{ id: 5, galleryUrl: Gallery5 },
+	{ id: 6, galleryUrl: Gallery6 },
+];
+
 function Gallery() {
 	return (
 		<>
-			<section class="gallery">
-				<h2 class="text-center fw-bold">
-					Our <span class="spantext">Services</span>
-				</h2>
+		  <section className="gallery">
+			  <h2 className="text-center fw-bold">
+				  <span className="spantext">Gallery</span>
+			  </h2>
 
-				<div class="container my-5">
-					<div class="row">
-						<div class="col-md-4">
-							<img
-								src={Gallery1}
-								alt="image-1"
-								class="img-fluid rounded"
-							/>
-						</div>
-						<div class="col-md-4">
-							<img
-								src={Gallery2}
-								alt="image-2"
-								class="img-fluid rounded"
-							/>
-						</div>
-						<div class="col-md-4">
-							<img
-								src={Gallery3}
-								alt="image-3"
-								class="img-fluid rounded"
-							/>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-md-4">
-							<img
-								src={Gallery4}
-								alt="image-4"
-								class="img-fluid rounded"
-							/>
-						</div>
-						<div class="col-md-4">
-							<img
-								src={Gallery5}
-								alt="image-5"
-								class="img-fluid rounded"
-							/>
-						</div>
-						<div class="col-md-4">
-							<img
-								src={Gallery6}
-								alt="image-6"
-								class="img-fluid rounded"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
-		</>
-	);
+			  <div className="container my-5">
+				  <div className="row">
+					  {GalleryApi.map((gallery, index) => {
+						  return (
+							  <div key={index} id={gallery.id} className="col-md-4">
+								  <img
+						  src={gallery.galleryUrl}
+						  alt={`image-${gallery.id}`}
+						  className="img-fluid rounded"
+					  />
+				  </div>
+				);
+			})}
+				  </div>
+			  </div>
+		  </section>
+	  </>
+  );
 }
 
 export default Gallery;

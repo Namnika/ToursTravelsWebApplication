@@ -9,277 +9,138 @@ import Package7 from "./assests/images/dubai-image.jpg";
 import Package8 from "./assests/images/santorini-image.jpg";
 import Package9 from "./assests/images/sydney-image.jpg";
 
+export const PackageApi = [
+	{
+		id: 1,
+		packageUrl: Package1,
+		packageTitle: "London, UK",
+		packageText:
+			"Iconic Big Ben, River Thames views, and rich British history await in London. Explore one of Europe’s most famous cities.",
+		packagePrice: "$1200",
+		packageRatings: "★★★★☆ (4.5/5) Ratings",
+	},
+	{
+		id: 2,
+		packageUrl: Package2,
+		packageTitle: "New York, USA",
+		packageText:
+			"The Empire State, Times Square, and Central Park – welcome to New York City, the heart of America’s East Coast.",
+		packagePrice: "$1200",
+		packageRatings: "★★★★★ (4.7/5) Ratings",
+	},
+	{
+		id: 3,
+		packageUrl: Package3,
+		packageTitle: "Paris, France",
+		packageText:
+			"Eiffel Tower, romantic streets, and French cuisine – explore Paris, the City of Lights in Western Europe.",
+		packagePrice: "$1300",
+		packageRatings: "★★★★★ (4.8/5) Ratings",
+	},
+	{
+		id: 4,
+		packageUrl: Package4,
+		packageTitle: "Munich, Germany",
+		packageText:
+			"Beer gardens, Bavarian culture, and stunning castles – experience Munich, nestled in southern Germany.",
+		packagePrice: "$1100",
+		packageRatings: "★★★★☆ (4.6/5) Ratings",
+	},
+	{
+		id: 5,
+		packageUrl: Package5,
+		packageTitle: "Mumbai, India",
+		packageText:
+			"Gateway of India, Bollywood, and bustling markets – dive into the energy of Mumbai on India’s west coast.",
+		packagePrice: "$800",
+		packageRatings: "★★★★☆ (4.4/5) Ratings",
+	},
+	{
+		id: 6,
+		packageUrl: Package6,
+		packageTitle: "Toronto, Canada",
+		packageText:
+			"CN Tower, diverse neighborhoods, and beautiful lakeside views – discover Toronto, Canada’s cultural capital.",
+		packagePrice: "$1400",
+		packageRatings: "★★★★☆ (4.6/5) Ratings",
+	},
+	{
+		id: 7,
+		packageUrl: Package7,
+		packageTitle: "Dubai, UAE",
+		packageText:
+			"Burj Khalifa, luxury malls, and desert adventures – explore futuristic Dubai in the heart of the UAE.",
+		packagePrice: "$1000",
+		packageRatings: "★★★★★ (4.9/5) Ratings",
+	},
+	{
+		id: 8,
+		packageUrl: Package8,
+		packageTitle: "Santorini, Greece",
+		packageText:
+			"Whitewashed houses, blue domes, and magical sunsets – Santorini, a gem in the Aegean Sea, awaits.",
+		packagePrice: "$1200",
+		packageRatings: "★★★★★ (4.9/5) Ratings",
+	},
+	{
+		id: 9,
+		packageUrl: Package9,
+		packageTitle: "Sydney, Australia",
+		packageText:
+			"Sydney Opera House, Harbour Bridge, and golden beaches – discover the coastal magic of Sydney, Australia.",
+		packagePrice: "$1600",
+		packageRatings: "★★★★★ (4.8/5) Ratings",
+	},
+];
+
 function Package() {
-    return (
-        <>
-            <section class="package my-3">
-                <h2 class="text-center fw-bold">
-                    Package <span class="spantext">Gallery</span>
-                </h2>
-                <div class="package-grid my-5">
-                    <div class="card package-card border border-opacity-25">
-                        <img
-                            src={Package1}
-                            class="card-img"
-                            alt="package1"
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">London, UK</h5>
-                            <p class="card-text text-wrap">
-                                Iconic Big Ben, River Thames views, and rich British history
-                                await in London. Explore one of Europe’s most famous cities.
-                            </p>
+	return (
+		<>
+		  <section className="package my-3">
+			  <h2 className="text-center fw-bold">
+				  Package <span className="spantext">Gallery</span>
+			  </h2>
+			  <div className="package-grid my-5">
+				  {PackageApi.map((pack, index) => {
+					  return (
+						  <div
+							  key={index}
+							  id={pack.id}
+							  className="card package-card border border-opacity-25"
+						  >
+					<img
+						src={pack.packageUrl}
+						className="card-img"
+						alt={`package-${pack.id}`}
+					/>
+					<div className="card-body">
+						<h5 className="card-title fw-semibold">
+							{pack.packageTitle}
+						</h5>
+						<p className="card-text text-wrap">{pack.packageText}</p>
 
-                            <div class="fs-5 fw-bold">$1200</div>
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★☆ (4.5/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card package-card border border-opacity-25">
-                        <img
-                            src={Package2}
-                            class="card-img"
-                            alt="package2"
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">New York, USA</h5>
-                            <p class="card-text text-wrap">
-                                The Empire State, Times Square, and Central Park – welcome to
-                                New York City, the heart of America’s East Coast.
-                            </p>
-                            <div class="fs-5 fw-bold">$1200</div>
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex pb-0 flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★★ (4.7/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card package-card border border-opacity-25">
-                        <img src={Package3} class="card-img" alt="package3" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Paris, France</h5>
-                            <p class="card-text text-wrap">
-                                Eiffel Tower, romantic streets, and French cuisine – explore
-                                Paris, the City of Lights in Western Europe.
-                            </p>
-                            <div class="fs-5 fw-bold">$1300</div>
-
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex pb-0 flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★★ (4.8/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card package-card border border-opacity-25">
-                        <img
-                            src={Package4}
-                            class="card-img"
-                            alt="package4"
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Munich, Germany</h5>
-                            <p class="card-text text-wrap">
-                                Beer gardens, Bavarian culture, and stunning castles –
-                                experience Munich, nestled in southern Germany.
-                            </p>
-
-                            <div class="fs-5 fw-bold">$1100</div>
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex pb-0 flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★☆ (4.6/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card package-card border border-opacity-25">
-                        <img
-                            src={Package5}
-                            class="card-img"
-                            alt="package5"
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Mumbai, India</h5>
-                            <p class="card-text text-wrap">
-                                Gateway of India, Bollywood, and bustling markets – dive into
-                                the energy of Mumbai on India’s west coast.
-                            </p>
-
-                            <div class="fs-5 fw-bold">$800</div>
-
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex pb-0 flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★☆ (4.4/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card package-card border border-opacity-25">
-                        <img
-                            src={Package6}
-                            class="card-img"
-                            alt="package6"
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Toronto, Canada</h5>
-                            <p class="card-text text-wrap">
-                                CN Tower, diverse neighborhoods, and beautiful lakeside views –
-                                discover Toronto, Canada’s cultural capital.
-                            </p>
-
-                            <div class="fs-5 fw-bold">$1400</div>
-
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex pb-0 flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★☆ (4.6/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card package-card border border-opacity-25">
-                        <img src={Package7} class="card-img" alt="package7" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Dubai, UAE</h5>
-                            <p class="card-text text-wrap">
-                                Burj Khalifa, luxury malls, and desert adventures – explore
-                                futuristic Dubai in the heart of the UAE.
-                            </p>
-
-                            <div class="fs-5 fw-bold">$1000</div>
-
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex pb-0 flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★★ (4.9/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card package-card border border-opacity-25">
-                        <img
-                            src={Package8}
-                            class="card-img"
-                            alt="package8"
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Santorini, Greece</h5>
-                            <p class="card-text text-wrap">
-                                Whitewashed houses, blue domes, and magical sunsets – Santorini,
-                                a gem in the Aegean Sea, awaits.
-                            </p>
-
-                            <div class="fs-5 fw-bold">$1200</div>
-
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex pb-0 flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★★ (4.9/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card package-card border border-opacity-25">
-                        <img
-                            src={Package9}
-                            class="card-img"
-                            alt="package9"
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Sydney, Australia</h5>
-                            <p class="card-text text-wrap">
-                                Sydney Opera House, Harbour Bridge, and golden beaches –
-                                discover the coastal magic of Sydney, Australia.
-                            </p>
-
-                            <div class="fs-5 fw-bold">$1600</div>
-
-                            {/* Book Now Button */}
-                            <div class="my-4 d-flex pb-0 flex-column flex-md-row justify-content-between">
-                                <button
-                                    type="submit"
-                                    class="btn btn-outline-dark order-1 order-md-0"
-                                    id="submit"
-                                >
-                                    Book Now
-                                </button>
-                                <div class="fs-6 fw-light order-0 order-md-1">
-                                    ★★★★★ (4.8/5) Ratings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
+						<div className="fs-5 fw-bold">{pack.packagePrice}</div>
+						{/* Book Now Button */}
+						<div className="my-4 d-flex flex-column flex-md-row justify-content-between">
+							<button
+								type="submit"
+								className="btn btn-outline-dark order-1 order-md-0"
+								id="submit"
+							>
+								Book Now
+							</button>
+							<div className="fs-6 fw-light order-0 order-md-1">
+								{pack.packageRatings}
+							</div>
+						</div>
+					</div>
+				</div>
+			  );
+		  })}
+			  </div>
+		  </section>
+	  </>
+  );
 }
 
 export default Package;
